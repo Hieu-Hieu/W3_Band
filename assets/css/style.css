@@ -22,6 +22,10 @@ html{
 #header{
     height: 46px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #nav{
@@ -95,12 +99,12 @@ html{
 }
 
 #slider{ 
-    min-height: 300px;
-    background-color: pink;
+   margin-top: 46px;
 }
 
 #content{
-
+    min-height: 800px;
+    background-color: pink;
 }
 
 #footer{
