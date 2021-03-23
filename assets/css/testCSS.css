@@ -1,5 +1,5 @@
 *{
-    padding: 0;
+    padding:  0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -11,64 +11,45 @@ html{
 }
 
 #header{
+    background-color: #000;
     height: 46px;
-    background-color: #000;  
+}
+
+#nav{
+
 }
 
 #nav, .subnav{
-   list-style-type: none;
-}
-
-#nav > li{
-    display: inline-block;
+    list-style-type: none;
 }
 
 #nav li{
-    position: relative;
+    display: inline-block;
+}
+#nav > li > a{
+    text-decoration: none;
+    line-height: 46px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 24px;
 }
 
 #nav li a{
-    color: #fff;
-    text-decoration: none;
-    line-height: 46px;
-    padding: 0 24px;
     display: block;
 }
 
-#nav > li:hover > a,
-#nav .subnav li:hover a{
+#nav li:hover a{
     color: #000;
-    background-color: #ccc;
-}
+    background-color: #fff;
 
-#nav > li > a{
-    text-transform: uppercase;
-}
-
-#nav li:hover .subnav{
-    display: block;
 }
 
 #nav .subnav{
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 160px;
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-}
-
-#nav .subnav a{
-    padding: 0 12px;
-    line-height: 38px;
-    color: #000;
+    display: none;
 }
 
 #slider{
-   
+
 }
 
 #content{
