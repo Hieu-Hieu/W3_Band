@@ -11,11 +11,84 @@
 3. màu sắc
 4. kiểu dáng(htron, vuong, kieu chu)
 */
+
+.clear{
+   clear: both; 
+}
+
+.text-white{
+    /* Chữ màu trắng */
+    color: #fff !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;/*the inline ma2 padding len tren ma gap the block thi no se ko cham len the kia dc ma no se bi de len tren => chuyen sang inline-block*/
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
 html{
     font-family: Arial, Helvetica, sans-serif;
     /* ko nên để ở thẻ "*" */
 }
-#main{
+/*---- common -----*/
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ 
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.333%;
+}
+
+.col-half {
+    width: 50%;
+} 
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+/* main */
+#main {
 
 }
 
@@ -100,7 +173,7 @@ html{
 }
 
 #slider{ 
-    position: relative;
+   position: relative;
    margin-top: 46px;
    padding-top: 50%;  /* khi mà để là % thì là 50% chiều ngang của chính nó */
    background: url('/assets/img/sliders/chicago.jpg') top center / cover no-repeat;
@@ -141,7 +214,7 @@ html{
 
 #content .content-section{
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px; /*top left-right bottom*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -168,6 +241,160 @@ html{
     line-height: 1.4; /* độ cao dòng: thường tiếng anh là 1.4, T việt là 1.6*/
 }
 
-#footer{
+#content .member-list{
+    margin-top: 48px;
+}
 
+/* #content .member-item{
+        text-align: center;
+} */
+
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-img{
+    width: 154px; /* thẻ img thì chỉ cần set width hoặc hight và chiều còn lại sẽ tự động tỉ lệ*/
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#content .member-list{
+
+}
+/* Tour section */
+
+.tour-section{
+    background-color: #000;
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.tickets-list li{
+    color: #757575;
+    font-size: 15px; /* default is 16px */
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    color: #fff;
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;/* day len tren 2px*/
+}
+/* place items */
+.place-list{
+    margin-top: 32px;
+}
+
+/* .place-item{
+    width: 33.333%;
+} */
+
+.place-img{
+    width: 100%; /* de963 ko vuot75 qua1 the chua no*/
+    display: block;/* do img co display la inline ma no dung canh 1 thang co display bang block */
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 16px;
+    background-color: #fff;
+    font-size: 15px; /*the h se ko an theo nen phai css font-size rieng cho the h*/
+
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Contact form */
+
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block; /* de la inline thi no se ko an theo width*/
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Map section */
+
+.map-section img{
+    width: 100%;
+}
+
+/* Footer section */
+#footer {
+    padding: 64px 16px;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
 }
